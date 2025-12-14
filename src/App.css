@@ -1,0 +1,143 @@
+/* src/App.css */
+
+/* --- Global Styles & Variables --- */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #6c757d; /* Gray */
+  --success-color: #28a745; /* Green */
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --spacing: 15px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Main Container --- */
+.app-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: var(--spacing);
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.app-container h1 {
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--spacing);
+  margin-top: 0;
+}
+
+/* --- Form Steps Layout (Step Renderer) --- */
+.form-step {
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.form-step h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* --- Form Elements --- */
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* --- Buttons --- */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, opacity 0.3s;
+  margin-top: 20px;
+}
+
+button:last-of-type {
+    margin-left: 10px;
+}
+
+/* Primary Button (Next, Submit) */
+button:not(:disabled) {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Secondary Button (Back) */
+button:first-of-type:not(:only-child) {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+button:first-of-type:not(:only-child):hover {
+  background-color: #5a6268;
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+
+/* --- Success Screen --- */
+.success-screen {
+  text-align: center;
+  padding: 50px;
+  background-color: #e6ffe6; /* Light green background */
+  border: 1px solid var(--success-color);
+  border-radius: 8px;
+}
+
+.success-screen h1 {
+  color: var(--success-color);
+  border: none;
+  margin-bottom: 20px;
+}
+
+.success-screen pre {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: left;
+  overflow-x: auto;
+}
